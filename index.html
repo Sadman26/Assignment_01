@@ -11,14 +11,25 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="navbar">
-      <div class="navbar__logo"><i class="fa-brands fa-react"></i></div>
+    <div class="navbar" id="navbar">
+      <div class="navbar__logo">
+        <i class="fa-solid fa-diagram-project"></i> Projex
+      </div>
       <ul class="navbar__list">
         <li class="navbar__item"><a href="#">Home</a></li>
         <li class="navbar__item"><a href="#">Profile</a></li>
         <li class="navbar__item"><a href="#">Exams</a></li>
       </ul>
     </div>
+    <div class="navbar__mobile" id="navbar__mobile">
+      <div class="hamburger" onclick="toggleMobileMenu()"></div>
+      <ul class="mobile-menu" id="mobileMenu">
+        <li class="navbar__item"><a href="#">Home</a></li>
+        <li class="navbar__item"><a href="#">Profile</a></li>
+        <li class="navbar__item"><a href="#">Exams</a></li>
+      </ul>
+    </div>
+
     <script src="./script.js"></script>
   </body>
 </html>
