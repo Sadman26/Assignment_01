@@ -121,4 +121,8 @@ body {
 .userbox {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+}
+.mt-10 {
+  margin-top: 115px;
 }
