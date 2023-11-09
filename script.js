@@ -12,6 +12,8 @@ let toggleDarkMode = () => {
     let bag = document.getElementById("bag");
     let titleintro = document.getElementById("titleintro");
     let paraintro = document.getElementById("paraintro");
+    let ourprod = document.getElementById("ourprod");
+    let client = document.getElementById("client");
 
     if (nvbr.style.backgroundColor === "white") {
         // Desktop mode dark theme
@@ -31,6 +33,8 @@ let toggleDarkMode = () => {
         nvbritm.style.textAlign = "center";
         titleintro.style.color = "white";
         paraintro.style.color = "white";
+        ourprod.style.color = "white";
+        client.style.color = "white";
         moon.style.display = "none";
         sun.style.display = "block";
     } else {
@@ -51,6 +55,8 @@ let toggleDarkMode = () => {
         nvbritm.style.textAlign = "center";
         titleintro.style.color = "black";
         paraintro.style.color = "black";
+        ourprod.style.color = "black";
+        client.style.color = "black";
         moon.style.display = "block";
         sun.style.display = "none";
     }
