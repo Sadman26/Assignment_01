@@ -12,21 +12,33 @@
   </head>
   <body>
     <div class="navbar" id="navbar">
-      <div class="navbar__logo">
+      <div class="navbar__logo" id="navbar__logo">
         <i class="fa-solid fa-diagram-project"></i> Projex
       </div>
-      <ul class="navbar__list">
-        <li class="navbar__item"><a href="#">Home</a></li>
-        <li class="navbar__item"><a href="#">Profile</a></li>
-        <li class="navbar__item"><a href="#">Exams</a></li>
+      <ul class="navbar__list" id="navbar__list">
+        <li class="navbar__item" id="a"><a href="#">Profile</a></li>
+        <li class="navbar__item" id="a">
+          <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+        </li>
+        <li class="navbar__item" id="a"><a id="boss" href="#">About</a></li>
+        <li class="navbar__item" id="a">
+          <a id="boss2" href="#"
+            ><i id="sunicon" class="fa-solid fa-sun"></i
+          ></a>
+        </li>
       </ul>
     </div>
     <div class="navbar__mobile" id="navbar__mobile">
       <div class="hamburger" onclick="toggleMobileMenu()"></div>
       <ul class="mobile-menu" id="mobileMenu">
-        <li class="navbar__item"><a href="#">Home</a></li>
         <li class="navbar__item"><a href="#">Profile</a></li>
-        <li class="navbar__item"><a href="#">Exams</a></li>
+        <li class="navbar__item">
+          <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+        </li>
+        <li class="navbar__item"><a href="#">About</a></li>
+        <li class="navbar__item">
+          <a href="#"><i id="sunicon" class="fa-solid fa-sun"></i></a>
+        </li>
       </ul>
     </div>
 
