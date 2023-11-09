@@ -5,6 +5,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  background-color: red;
+}
 .navbar {
   background-color: #000000;
   display: flex;
@@ -12,7 +15,7 @@
   align-items: center;
   padding: 15px 20px;
   color: #fff;
-  box-shadow: 2px 2px 4px gray;
+  box-shadow: 2px 2px 4px rgb(0, 0, 0);
 }
 .navbar__logo {
   font-weight: bold;
@@ -32,6 +35,11 @@
   &:hover {
     color: #00d9ff;
   }
+}
+.mobile-menu {
+  list-style: none;
+  display: flex;
+  padding: 10px 0;
 }
 .navbar__logo {
   color: #fff;
@@ -70,6 +78,9 @@
   }
   .navbar__list {
     display: none;
+  }
+  .navbar__logo {
+    text-align: center;
   }
 }
 .mobile-menu {
