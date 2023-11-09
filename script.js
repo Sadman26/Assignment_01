@@ -9,11 +9,13 @@ let toggleDarkMode = () => {
     let sun = document.getElementById("sunicon");
     let darkfoot = document.getElementById("darkfoot");
     let whitefoot = document.getElementById("whitefoot");
+    let bag = document.getElementById("bag");
 
     if (nvbr.style.backgroundColor === "white") {
         // Desktop mode dark theme
         nvbr.style.backgroundColor = "black";
         nvbritm.style.color = "white";
+        bag.style.color = "white";
         darkfoot.style.display = "block";
         whitefoot.style.display = "none";
         bdy.style.backgroundColor = "#0f0f0f";
@@ -34,6 +36,7 @@ let toggleDarkMode = () => {
         nvbr.style.backgroundColor = "white";
         bdy.style.backgroundColor = "white";
         nvbritm.style.color = "black";
+        bag.style.color = "black";
         darkfoot.style.display = "none";
         whitefoot.style.display = "block";
         for (let i = 0; i < links.length; i++) {
@@ -77,3 +80,30 @@ function fetchUserData(index) {
 fetchUserData(1);
 fetchUserData(2);
 fetchUserData(3);
+
+
+//handing the badge ⚡⚡
+let btn1 = document.getElementById("btn1");
+let btn2 = document.getElementById("btn2");
+let btn3 = document.getElementById("btn3");
+let badge = document.getElementById("badge");
+btn1.addEventListener("click", function () {
+    if (badge.style.display === "block") {
+        alert("One Purchase Running..");
+    }
+    else {
+        badge.style.display = "block";
+    }
+});
+btn2.addEventListener("click", function () {
+    if (badge.style.display === "block") {
+        alert("One Purchase Running..");
+    }
+    else {
+
+        badge.style.display = "block";
+    }
+});
+btn3.addEventListener("click", function () {
+    alert("Sorry Stock Out 🥹🥹");
+});

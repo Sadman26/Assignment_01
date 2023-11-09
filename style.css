@@ -126,3 +126,6 @@ body {
 .mt-10 {
   margin-top: 115px;
 }
+#badge {
+  display: none;
+}

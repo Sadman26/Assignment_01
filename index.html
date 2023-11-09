@@ -24,7 +24,18 @@
       <ul class="navbar__list" id="navbar__list">
         <li class="navbar__item" id="a"><a href="#">Profile</a></li>
         <li class="navbar__item" id="a">
-          <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+          <div class="position-relative">
+            <i
+              id="bag"
+              class="fa-solid fa-bag-shopping fa-2x"
+              style="font-size: 24px"
+            ></i>
+            <span
+              id="badge"
+              class="position-absolute top-0 end-0 p-1 bg-primary text-white border border-light rounded-circle"
+              style="font-size: 12px"
+            ></span>
+          </div>
         </li>
         <li class="navbar__item" id="a"><a id="boss" href="#">About</a></li>
         <li class="navbar__item" id="a">
@@ -61,7 +72,7 @@
             This App is build by Flask,Firebase.It can create,read,update,delete
             Notes
           </p>
-          <a href="#" class="btn btn-primary">$ 30.66</a>
+          <a href="#" class="btn btn-primary" id="btn1">$ 30.66</a>
         </div>
       </div>
       <div class="card" style="width: 18rem">
@@ -71,7 +82,7 @@
           <p class="card-text">
             This App is Build with c#.It is very useful for petshop
           </p>
-          <a href="#" class="btn btn-primary">$ 20.66</a>
+          <a href="#" class="btn btn-primary" id="btn2">$ 20.66</a>
         </div>
       </div>
       <div class="card" style="width: 18rem">
@@ -82,7 +93,7 @@
             This App is a clone of Whatsapp which aims to complete all the works
             that a social media app does
           </p>
-          <a href="#" class="btn btn-danger">Stock out</a>
+          <a href="#" class="btn btn-danger" id="btn3">Stock out</a>
         </div>
       </div>
     </div>
@@ -158,7 +169,7 @@
               href="#!"
               role="button"
               data-mdb-ripple-color="dark"
-              ><i class="fab fa-twitter"></i
+              ><i class="fa-brands fa-x-twitter"></i
             ></a>
             <a
               class="btn btn-link btn-floating btn-lg text-white m-1"
@@ -214,7 +225,7 @@
               href="#!"
               role="button"
               data-mdb-ripple-color="dark"
-              ><i class="fab fa-twitter"></i
+              ><i class="fa-brands fa-x-twitter"></i
             ></a>
             <a
               class="btn btn-link btn-floating btn-lg text-dark m-1"
