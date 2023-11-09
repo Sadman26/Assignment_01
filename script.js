@@ -55,3 +55,25 @@ let sun = document.getElementById("sunicon");
 sun.addEventListener("click", toggleDarkMode);
 let moon = document.getElementById("moonicon");
 moon.addEventListener("click", toggleDarkMode);
+
+
+//random username and pic
+function fetchUserData(index) {
+    fetch('https://randomuser.me/api/')
+        .then(response => response.json())
+        .then(data => {
+            const user = data.results[0];
+            const userName = `${user.name.first} ${user.name.last}`;
+            const userImage = user.picture.large;
+
+            // Update the HTML elements with the fetched data for the specific card
+            document.getElementById(`username${index}`).textContent = userName;
+            document.getElementById(`userimg${index}`).src = userImage;
+        })
+        .catch(error => console.error('Error:', error));
+}
+
+// Fetch data for three different users and update the corresponding cards
+fetchUserData(1);
+fetchUserData(2);
+fetchUserData(3);
