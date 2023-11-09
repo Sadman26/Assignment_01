@@ -10,6 +10,8 @@ let toggleDarkMode = () => {
     let darkfoot = document.getElementById("darkfoot");
     let whitefoot = document.getElementById("whitefoot");
     let bag = document.getElementById("bag");
+    let titleintro = document.getElementById("titleintro");
+    let paraintro = document.getElementById("paraintro");
 
     if (nvbr.style.backgroundColor === "white") {
         // Desktop mode dark theme
@@ -27,8 +29,8 @@ let toggleDarkMode = () => {
             mobileLinks[i].style.color = "white";
         }
         nvbritm.style.textAlign = "center";
-
-        // Show moon icon and hide sun icon
+        titleintro.style.color = "white";
+        paraintro.style.color = "white";
         moon.style.display = "none";
         sun.style.display = "block";
     } else {
@@ -47,8 +49,8 @@ let toggleDarkMode = () => {
             mobileLinks[i].style.color = "black";
         }
         nvbritm.style.textAlign = "center";
-
-        // Show sun icon and hide moon icon
+        titleintro.style.color = "black";
+        paraintro.style.color = "black";
         moon.style.display = "block";
         sun.style.display = "none";
     }
