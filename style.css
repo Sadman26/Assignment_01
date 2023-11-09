@@ -107,3 +107,9 @@ body {
   text-align: center;
   box-shadow: 2px 4px 4px rgb(40, 40, 40);
 }
+.whitefoot {
+  display: none;
+}
+.blackfoot {
+  display: block;
+}

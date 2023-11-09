@@ -7,11 +7,15 @@ let toggleDarkMode = () => {
     let bdy = document.querySelector("body");
     let moon = document.getElementById("moonicon");
     let sun = document.getElementById("sunicon");
+    let darkfoot = document.getElementById("darkfoot");
+    let whitefoot = document.getElementById("whitefoot");
 
     if (nvbr.style.backgroundColor === "white") {
         // Desktop mode dark theme
         nvbr.style.backgroundColor = "black";
         nvbritm.style.color = "white";
+        darkfoot.style.display = "block";
+        whitefoot.style.display = "none";
         bdy.style.backgroundColor = "#0f0f0f";
         for (let i = 0; i < links.length; i++) {
             links[i].style.color = "white";
@@ -30,6 +34,8 @@ let toggleDarkMode = () => {
         nvbr.style.backgroundColor = "white";
         bdy.style.backgroundColor = "white";
         nvbritm.style.color = "black";
+        darkfoot.style.display = "none";
+        whitefoot.style.display = "block";
         for (let i = 0; i < links.length; i++) {
             links[i].style.color = "black";
         }
