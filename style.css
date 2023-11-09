@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 body {
-  background-color: red;
+  background-color: #0f0f0f;
 }
 .navbar {
   background-color: #000000;
@@ -86,5 +86,20 @@ body {
 .mobile-menu {
   background-color: black;
   padding: 15px 20px;
-  box-shadow: 2px 2px 4px gray;
+  box-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+#moonicon {
+  display: none;
+}
+.projcont {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin: 10px;
+  justify-content: center;
+}
+
+.card {
+  margin: 10px;
+  text-align: center;
 }

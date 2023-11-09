@@ -1,14 +1,18 @@
-function toggleDarkMode() {
+let toggleDarkMode = () => {
     let nvbr = document.getElementById("navbar");
     let nvbritm = document.querySelector(".navbar__logo");
     let links = document.querySelectorAll(".navbar__list a");
     let mobileMenu = document.getElementById("mobileMenu");
     let mobileLinks = document.querySelectorAll(".mobile-menu a");
     let bdy = document.querySelector("body");
+    let moon = document.getElementById("moonicon");
+    let sun = document.getElementById("sunicon");
+
     if (nvbr.style.backgroundColor === "white") {
+        // Desktop mode dark theme
         nvbr.style.backgroundColor = "black";
         nvbritm.style.color = "white";
-        bdy.style.backgroundColor = "white";
+        bdy.style.backgroundColor = "#0f0f0f";
         for (let i = 0; i < links.length; i++) {
             links[i].style.color = "white";
         }
@@ -17,6 +21,10 @@ function toggleDarkMode() {
             mobileLinks[i].style.color = "white";
         }
         nvbritm.style.textAlign = "center";
+
+        // Show moon icon and hide sun icon
+        moon.style.display = "none";
+        sun.style.display = "block";
     } else {
         // Desktop mode light theme
         nvbr.style.backgroundColor = "white";
@@ -30,8 +38,14 @@ function toggleDarkMode() {
             mobileLinks[i].style.color = "black";
         }
         nvbritm.style.textAlign = "center";
+
+        // Show sun icon and hide moon icon
+        moon.style.display = "block";
+        sun.style.display = "none";
     }
 }
 
 let sun = document.getElementById("sunicon");
 sun.addEventListener("click", toggleDarkMode);
+let moon = document.getElementById("moonicon");
+moon.addEventListener("click", toggleDarkMode);
