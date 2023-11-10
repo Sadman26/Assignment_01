@@ -173,6 +173,7 @@ body {
 }
 .ourserve {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 .ourserve .serv {
