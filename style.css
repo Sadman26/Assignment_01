@@ -175,6 +175,14 @@ body {
   display: flex;
   justify-content: center;
 }
+.ourserve .serv {
+  padding: 10px;
+}
 .ourserve .serv img {
   height: 120px;
+}
+.wesrv h1 {
+  padding: 10px;
+  margin: 10px;
+  color: white;
 }
