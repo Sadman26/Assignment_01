@@ -107,6 +107,9 @@ body {
   text-align: center;
   box-shadow: 2px 4px 4px rgb(40, 40, 40);
 }
+.user-details {
+  margin-left: 10px;
+}
 .d-flex img {
   border-style: solid;
 }
