@@ -70,11 +70,40 @@ sun.addEventListener("click", toggleDarkMode);
 let moon = document.getElementById("moonicon");
 moon.addEventListener("click", toggleDarkMode);
 
+// Mobile menu toggle
+let isMobileMenuOpen = false;
+
+function toggleMobileMenu() {
+    const mobileMenu = document.getElementById("mobileMenu");
+    const menuIcon = document.getElementById("menu-icon");
+
+    if (!isMobileMenuOpen) {
+        mobileMenu.style.display = "block";
+        isMobileMenuOpen = true;
+        menuIcon.classList.remove("fa-bars");
+        menuIcon.classList.add("fa-times"); // Replace with the appropriate close icon class
+    } else {
+        mobileMenu.style.display = "none";
+        isMobileMenuOpen = false;
+        menuIcon.classList.remove("fa-times");
+        menuIcon.classList.add("fa-bars");
+    }
+}
+
+// Event listener for mobile menu icon
+const menuIcon = document.getElementById("menu-icon");
+menuIcon.addEventListener("click", toggleMobileMenu);
+
 
 //random username and pic
 function fetchUserData(index) {
     fetch('https://randomuser.me/api/')
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
         .then(data => {
             const user = data.results[0];
             const userName = `${user.name.first} ${user.name.last}`;
@@ -84,10 +113,12 @@ function fetchUserData(index) {
             document.getElementById(`username${index}`).textContent = userName;
             document.getElementById(`userimg${index}`).src = userImage;
         })
-        .catch(error => console.error('Error:', error));
+        .catch(error => {
+            console.error('Error:', error);
+        });
 }
 
-// Fetch data for three different users and update the corresponding cards
+// Call fetchUserData for three different users and update the corresponding cards
 fetchUserData(1);
 fetchUserData(2);
 fetchUserData(3);

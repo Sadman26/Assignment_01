@@ -72,15 +72,29 @@ body {
   display: none;
 }
 
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+.hamburger i:hover {
+  color: rgb(55, 221, 55);
+}
 @media (max-width: 768px) {
-  .mobile-menu {
+  .hamburger {
     display: block;
   }
+
   .navbar__list {
     display: none;
   }
   .navbar__logo {
     text-align: center;
+  }
+  .navbar {
+    text-align: center;
+  }
+  #navbar__logo {
+    margin: 0 auto;
   }
 }
 .mobile-menu {
