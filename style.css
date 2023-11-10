@@ -171,3 +171,10 @@ body {
   margin: 10px;
   color: white;
 }
+.ourserve {
+  display: flex;
+  justify-content: center;
+}
+.ourserve .serv img {
+  height: 120px;
+}
