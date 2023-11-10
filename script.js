@@ -95,35 +95,6 @@ const menuIcon = document.getElementById("menu-icon");
 menuIcon.addEventListener("click", toggleMobileMenu);
 
 
-//random username and pic
-function fetchUserData(index) {
-    fetch('https://randomuser.me/api/')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            const user = data.results[0];
-            const userName = `${user.name.first} ${user.name.last}`;
-            const userImage = user.picture.large;
-
-            // Update the HTML elements with the fetched data for the specific card
-            document.getElementById(`username${index}`).textContent = userName;
-            document.getElementById(`userimg${index}`).src = userImage;
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
-}
-
-// Call fetchUserData for three different users and update the corresponding cards
-fetchUserData(1);
-fetchUserData(2);
-fetchUserData(3);
-
-
 //handing the badge ⚡⚡
 let btn1 = document.getElementById("btn1");
 let btn2 = document.getElementById("btn2");
