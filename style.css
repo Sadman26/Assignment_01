@@ -152,7 +152,7 @@ body {
 .intro {
   display: flex;
   padding: 10px;
-  margin: 10px;
+  margin-left: 15px;
   max-width: 100%;
   justify-content: center;
 }
